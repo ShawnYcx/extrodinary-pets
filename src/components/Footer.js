@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import logo from '../img/logo.svg'
 import facebook from '../img/social/facebook.svg'
 import instagram from '../img/social/instagram.svg'
 import twitter from '../img/social/twitter.svg'
@@ -69,14 +68,14 @@ const Footer = class extends React.Component {
               </div>
 
               <div className="column is-4 social">
-                <a title="facebook" href="https://www.facebook.com/ExtraordinaryPet/">
+                <a title="facebook" href="https://www.facebook.com/ExtraordinaryPet/" target="_blank" rel="noopener noreferrer">
                   <img
                     src={facebook}
                     alt="Extraordinary Pet Facebook Page"
                     style={{ width: '1em', height: '1em' }}
                   />
                 </a>
-                <a title="twitter" href="https://twitter.com">
+                <a title="twitter" href="https://twitter.com" target="_blank" rel="noopener noreferrer">
                   <img
                     className="fas fa-lg"
                     src={twitter}
@@ -84,14 +83,14 @@ const Footer = class extends React.Component {
                     style={{ width: '1em', height: '1em' }}
                   />
                 </a>
-                <a title="instagram" href="https://instagram.com">
+                <a title="instagram" href="https://instagram.com" target="_blank" rel="noopener noreferrer">
                   <img
                     src={instagram}
                     alt="Extraordinary Pet Instagram Page"
                     style={{ width: '1em', height: '1em' }}
                   />
                 </a>
-                <a title="messenger" href="m.me/ExtraordinaryPet">
+                <a title="messenger" href="https://m.me/ExtraordinaryPet" target="_blank" rel="noopener noreferrer">
                   <img
                     src={messenger}
                     alt="Extraordinary Pet Messenger Chat"
