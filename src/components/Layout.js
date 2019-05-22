@@ -19,28 +19,32 @@ const TemplateWrapper = ({ children }) => {
           sizes="180x180"
           href="/img/apple-touch-icon.png"
         />
+
         <link
           rel="icon"
           type="image/png"
-          href="/img/favicon-32x32.png"
+          href="/img/favicon.png"
           sizes="32x32"
         />
+
         <link
           rel="icon"
           type="image/png"
-          href="/img/favicon-16x16.png"
+          href="/img/favicon.png"
           sizes="16x16"
         />
 
         <link
           rel="mask-icon"
-          href="/img/safari-pinned-tab.svg"
+          href="/img/favicon.svg"
           color="#ff4400"
         />
+
         <meta name="theme-color" content="#fff" />
 
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>
