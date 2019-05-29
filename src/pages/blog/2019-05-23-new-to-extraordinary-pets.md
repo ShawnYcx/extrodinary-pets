@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: New to Extraordinary Pets?
+title: A Beginners’ Guide to Extrodinary Pets?
 date: 2019-05-23T20:49:52.747Z
 description: >-
   Alrighty, here's some guide for new hobbyist that are not sure about the
