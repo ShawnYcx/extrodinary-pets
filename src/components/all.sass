@@ -122,9 +122,23 @@ $menu-label-color: $white-ter
   flex-basis: 35%;
   margin: 0 1.5em 0 0;
 
+@import '~bulma/bulma.sass';
 
-@import "~bulma"
+body
+  color: #69707a;
+  line-height: 1.428571428571429;
 
+.title.is-3
+  font-size: 28px;
+
+.title.is-2
+  font-size: 40px;
+
+.title
+  font-weight: 300;
+
+.title:not(:last-child)
+  margin-bottom: 20px;
 
 // responsiveness
 +tablet-only
@@ -138,3 +152,6 @@ $menu-label-color: $white-ter
     text-align: center;
     max-width: 70%;
     margin: 0 0 1em;
+
+.has-text-muted 
+  color: #95A5A6;

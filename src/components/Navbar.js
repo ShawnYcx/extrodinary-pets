@@ -45,6 +45,9 @@ const Navbar = () => {
             {/* Left nav items here */}
           </div>
           <div className="navbar-end has-text-centered">
+            <Link className="navbar-item" to="/gallery">
+              Gallery
+            </Link>
             <Link className="navbar-item" to="/products">
               Products
             </Link>
