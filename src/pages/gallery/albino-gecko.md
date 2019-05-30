@@ -1,5 +1,5 @@
 ---
-templateKey: gallery-page
+templateKey: gallery-post
 title: Albino Gecko
 date: 2019-05-30T16:03:44.573Z
 featureditem: true
