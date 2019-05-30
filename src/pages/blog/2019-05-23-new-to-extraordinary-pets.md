@@ -1,12 +1,14 @@
 ---
 templateKey: blog-post
-title: A Beginners’ Guide to Extrodinary Pets?
+title: A Beginners’ Guide to Extrodinary Pets
 date: 2019-05-23T20:49:52.747Z
 description: >-
   Alrighty, here's some guide for new hobbyist that are not sure about the
   hobby.
 featuredpost: false
 featuredimage: /img/23.jpg
+tags:
+  - Gecko
 ---
 ![Hansome Gecko Pic](/img/23.jpg "Hansome Gecko Pic")
 
