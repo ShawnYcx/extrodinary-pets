@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import { FaHeart, FaCalendar } from 'react-icons/fa';
 import PreviewCompatibleImage from './PreviewCompatibleImage';
-import Masonry from './Masonry';
 
 const GalleryRoll = ({ data }) => {
   const { edges: gallery } = data.allMarkdownRemark

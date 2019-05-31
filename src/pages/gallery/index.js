@@ -13,10 +13,6 @@ const GalleryIndexPage = () => {
             <div className="column is-8">
               <div className="title">Featured</div>
             </div>
-            {/* <div className="column is-4 has-text-right">
-              <a className="button is-active"><FaTh /></a>
-              <a className="button"><FaAlignJustify /></a>
-            </div> */}
           </div>
           <hr />
           <GalleryRoll />
