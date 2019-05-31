@@ -7,6 +7,7 @@ description: >-
   Camoflauge into the snow environment to protect itself.
 featuredpost: true
 price: 200
+image: /img/23.jpg
 # featuredimage: /img/23.jpg
 # tags:
   # - Gecko

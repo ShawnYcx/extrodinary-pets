@@ -48,15 +48,15 @@ const Navbar = () => {
             <Link className="navbar-item" to="/gallery">
               Gallery
             </Link>
-            <Link className="navbar-item" to="/products">
+            {/* <Link className="navbar-item" to="/products">
               Products
-            </Link>
+            </Link> */}
             <Link className="navbar-item" to="/blog">
               Blog
             </Link>
-            <Link className="navbar-item" to="/contact">
+            {/* <Link className="navbar-item" to="/contact">
               Contact
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

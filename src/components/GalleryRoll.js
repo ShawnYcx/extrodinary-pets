@@ -1,26 +1,35 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
+import { FaHeart, FaCalendar } from 'react-icons/fa';
+import PreviewCompatibleImage from './PreviewCompatibleImage';
+import Masonry from './Masonry';
 
 const GalleryRoll = ({ data }) => {
   const { edges: gallery } = data.allMarkdownRemark
 
   return <div className="columns is-multiline">
     {gallery && gallery.map(({ node: post }) => (
-      <div className="is-parent column is-3" key={post.id}>
+      <div className="is-parent column is-3" key={post.id} >
         <Link to={post.fields.slug}>
-          <div className={`card`}>
-            <div className="card-content">
-              <div className="media">
-                <div className="media-content">
-                  <p className="title is-4">{post.frontmatter.title}</p>
-                  <p className="subtitle is-6">${post.frontmatter.price}</p>
-                </div>
-              </div>
-
-              <div className="content">
-                {post.frontmatter.description}
-              </div>
+          <div className="panel hoverable">
+            <p className="panel-heading">
+              {post.frontmatter.title}
+            </p>
+            <div className="is-marginless" style={{
+              height: '300px',
+            }}>
+              <PreviewCompatibleImage
+                imageInfo={{
+                  image: post.frontmatter.image,
+                  alt: `Image thumbnail for post ${post.title}`,
+                  style: {
+                    maxWidth: '100%',
+                    height: '100%',
+                    borderRadius: '0 0 5px 5px',
+                  }
+                }}
+              />
             </div>
           </div>
         </Link>
@@ -58,6 +67,14 @@ export default () => (
                 description
                 featuredpost
                 price
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 120, quality: 100) {
+                      ...GatsbyImageSharpFluid_tracedSVG
+                      presentationWidth
+                    }
+                  }
+                }
               }
             }
           }

@@ -4,16 +4,26 @@ import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout';
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 
-const GalleryPostTemplate = ({ title, price, description }) => {
+const GalleryPostTemplate = ({ title, price, description, image }) => {
   return (
     <section className="section">
       <div className="container">
         <div className="columns">
           <div className="column is-6">
-            <div class="image is-1by1">
-              <img src="https://placehold.it/1000x1000" />
-            </div>
+            <figure style={{ maxWidth: '500px', margin: 'auto' }}>
+              <PreviewCompatibleImage
+                imageInfo={{
+                  image: image,
+                  alt: `Image thumbnail for post ${title}`,
+                  style: {
+                    maxWidth: '100%',
+                    height: '100%',
+                  }
+                }}
+              />
+            </figure>
           </div>
           <div className="column is-5 is-offset-1">
             <div className="title is-2">{title}</div>
@@ -47,6 +57,7 @@ const GalleryPost = ({ data }) => {
         description={post.frontmatter.description}
         price={post.frontmatter.price}
         title={post.frontmatter.title}
+        image={post.frontmatter.image}
       />
     </Layout>
   )
@@ -66,10 +77,19 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         title
+        templateKey
+        date(formatString: "MMMM DD, YYYY")
         description
+        featuredpost
         price
+        image {
+          childImageSharp {
+            fluid(maxWidth: 120, quality: 100) {
+              ...GatsbyImageSharpFluid_tracedSVG
+            }
+          }
+        }
       }
     }
   }
