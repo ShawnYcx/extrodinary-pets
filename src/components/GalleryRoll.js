@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
-import { FaHeart, FaCalendar } from 'react-icons/fa';
 import PreviewCompatibleImage from './PreviewCompatibleImage';
 
 const GalleryRoll = ({ data }) => {

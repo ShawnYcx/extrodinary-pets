@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout';
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 
-const GalleryPostTemplate = ({ title, price, description, image }) => {
+const GalleryPostTemplate = ({ title, price, description, image, helmet }) => {
   return (
     <section className="section">
+      {helmet || ''}
       <div className="container">
         <div className="columns">
           <div className="column is-6">
@@ -58,6 +58,15 @@ const GalleryPost = ({ data }) => {
         price={post.frontmatter.price}
         title={post.frontmatter.title}
         image={post.frontmatter.image}
+        helmet={
+          <Helmet titleTemplate="%s | Gallery">
+            <title>{`${post.frontmatter.title}`}</title>
+            <meta
+              name="description"
+              content={`${post.frontmatter.description}`}
+            />
+          </Helmet>
+        }
       />
     </Layout>
   )

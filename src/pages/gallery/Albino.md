@@ -5,7 +5,7 @@ date: 2019-05-23T20:49:52.747Z
 description: >-
   Born as disorder but seen as beauty.
   Camoflauge into the snow environment to protect itself.
-featuredpost: true
+featuredpost: false
 price: 200
 image: /img/23.jpg
 # featuredimage: /img/23.jpg

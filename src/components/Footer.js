@@ -6,10 +6,11 @@ import instagram from '../img/social/instagram.svg'
 import twitter from '../img/social/twitter.svg'
 import messenger from '../img/social/messenger.svg'
 
-const Social = ({ title, href, src, ...otherImageProps }) => {
+const Social = ({ title, href, src, alt, ...otherImageProps }) => {
   return <a title={title} href={href} target="_blank" rel="noopener noreferrer">
     <img
       src={src}
+      alt={alt}
       {...otherImageProps}
     />
   </a>
