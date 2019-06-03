@@ -18,12 +18,13 @@ export const IndexPageTemplate = ({
     <div>
       <div
         className="full-width-image margin-top-0"
+        title="Image of reptile contributed by Wayneson Tay"
         style={{
           backgroundImage: `url(${
             !!image.childImageSharp ? image.childImageSharp.fluid.src : image
             })`,
-          backgroundPosition: `center`,
-          backgroundAttachment: `fixed`,
+          backgroundAttachment: 'fixed',
+          opacity: .95
         }}
       >
         <div
@@ -39,9 +40,8 @@ export const IndexPageTemplate = ({
           <h1
             className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
             style={{
-              boxShadow:
-                'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-              backgroundColor: 'rgb(255, 68, 0)',
+              boxShadow: '#468c78 0.3rem 0px 0px, #468c78 -0.3rem 0px 0px',
+              backgroundColor: 'hsla(0, 0%, 0%, 0.3)',
               color: 'white',
               lineHeight: '1',
               padding: '0.25em',
@@ -49,19 +49,18 @@ export const IndexPageTemplate = ({
           >
             {title}
           </h1>
-          <h3
+          {/* <h3
             className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
             style={{
-              boxShadow:
-                'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-              backgroundColor: 'rgb(255, 68, 0)',
+              boxShadow: '#468c78 0.5rem 0px 0px, #468c78 -0.5rem 0px 0px',
+              backgroundColor: 'hsla(0, 0%, 0%, 0.3)',
               color: 'white',
               lineHeight: '1',
               padding: '0.25em',
             }}
           >
             {subheading}
-          </h3>
+          </h3> */}
         </div>
       </div>
       <section className="section section--gradient">
