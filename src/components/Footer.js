@@ -83,23 +83,23 @@ const Footer = () => {
                 title="facebook"
                 href="https://www.facebook.com/ExtraordinaryPet/"
                 src={facebook} style={socialStyle}
-                alt="Extraordinary Pet Facebook Page"
+                alt="ReptileNation Facebook Page"
               />
               <Social
                 title="twitter"
                 href="https://twitter.com"
                 src={twitter} style={socialStyle}
-                alt="Extraordinary Pet Twitter Page" />
+                alt="ReptileNation Twitter Page" />
               <Social
                 title="instagram"
                 href="https://instagram.com"
                 src={instagram} style={socialStyle}
-                alt="Extraordinary Pet Instagram Page" />
+                alt="ReptileNation Instagram Page" />
               <Social
                 title="messenger"
                 href="https://m.me/ExtraordinaryPet"
                 src={messenger} style={socialStyle}
-                alt="Extraordinary Pet Messenger Chat" />
+                alt="ReptileNation Messenger Chat" />
             </div>
           </div>
         </div>

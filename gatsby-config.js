@@ -2,9 +2,9 @@ var proxy = require('http-proxy-middleware')
 
 module.exports = {
   siteMetadata: {
-    title: 'Extrodinary Pets',
+    title: 'Reptile Nation',
     description:
-      'A glance of extraordinary and rare animals living alongside humans as buddies.',
+      'Welcome to ReptileNation where we walk and talk reptiles. Join us in supporting, learning, and growing with reptiles while sipping a cup of coffee',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

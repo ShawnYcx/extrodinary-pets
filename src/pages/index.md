@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-title: Reptile Republic
+title: Reptile Nation
 image: /img/cover.jpg
 heading: Great coffee with a conscience
 subheading: 'Support, learn, grow with reptiles while enjoying a cup of Coffee'

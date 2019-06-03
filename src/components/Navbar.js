@@ -23,7 +23,7 @@ const Navbar = () => {
         <div className="navbar-brand">
           <Link to="/" className="navbar-item" title="Logo">
 
-            <h1 className="title">Extrodinary Pets</h1>
+            <h1 className="title">ReptileNation</h1>
             {/* <img src={logo} alt="Kaldi" style={{ width: '88px' }} /> */}
           </Link>
           {/* Hamburger menu */}
