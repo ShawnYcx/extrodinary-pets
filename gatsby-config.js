@@ -10,8 +10,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-gtag`,
       options: {
-        trackingId: "UA-93825609-1",
-        head: false,
+        trackingId: "UA-93825609-2",
+        head: true,
       },
     },
     'gatsby-plugin-react-helmet',
