@@ -7,6 +7,12 @@ module.exports = {
       'Welcome to ReptileNation where we walk and talk reptiles. Join us in supporting, learning, and growing with reptiles while sipping a cup of coffee',
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-93825609-1",
+      },
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     {
