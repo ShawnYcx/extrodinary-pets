@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import GalleryRoll from '../../components/GalleryRoll';
+import FeaturedRoll from '../../components/FeaturedRoll';
 
 const GalleryIndexPage = () => {
   return (
@@ -13,7 +14,7 @@ const GalleryIndexPage = () => {
             </div>
           </div>
           <hr />
-          <GalleryRoll />
+          <FeaturedRoll />
         </div>
       </section>
       <section className="section">

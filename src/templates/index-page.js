@@ -5,6 +5,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
+import FeaturedRoll from '../components/FeaturedRoll';
 
 export const IndexPageTemplate = ({
   image,
@@ -67,14 +68,15 @@ export const IndexPageTemplate = ({
         <div className="container">
           <div className="section">
             <div className="columns">
-              <div className="column is-10 is-offset-1">
+              <div className="column is-12">
                 <div className="content">
-                  <div className="content">
+                  <FeaturedRoll />
+                  {/* <div className="content">
                     <div className="tile">
-                      <h1 className="title">{mainpitch.title}</h1>
+                      <h1 className="title">{title}</h1>
                     </div>
                     <div className="tile">
-                      <h3 className="subtitle">{mainpitch.description}</h3>
+                      <h3 className="subtitle">{description}</h3>
                     </div>
                   </div>
                   <div className="columns">
@@ -89,15 +91,15 @@ export const IndexPageTemplate = ({
                   <div className="columns">
                     <div className="column is-12 has-text-centered">
                       <Link className="btn" to="/products">
-                        See all products
+                        Go to Gallery
                     </Link>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="column is-12">
                     <h3 className="has-text-weight-semibold is-size-2">
                       Latest stories
-                  </h3>
-                    <BlogRoll />
+                    </h3>
+                    {/* <BlogRoll /> */}
                     <div className="column is-12 has-text-centered">
                       <Link className="btn" to="/blog">
                         Read more

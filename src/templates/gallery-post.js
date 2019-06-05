@@ -46,9 +46,9 @@ const GalleryPost = ({ data }) => {
         <div className="container">
           <div className="columns">
             <div className="column">
-              <span class="title is-4">{post.frontmatter.title}</span>
-              <span class="title is-4 has-text-muted">&nbsp;|&nbsp;</span>
-              <span class="title is-5 has-text-muted">$ {post.frontmatter.price}</span>
+              <span className="title is-4">{post.frontmatter.title}</span>
+              <span className="title is-4 has-text-muted">&nbsp;|&nbsp;</span>
+              <span className="title is-5 has-text-muted">$ {post.frontmatter.price}</span>
             </div>
           </div>
         </div>

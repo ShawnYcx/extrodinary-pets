@@ -1,19 +1,11 @@
 var proxy = require('http-proxy-middleware')
-
-module.exports = {
+const cfg = {
   siteMetadata: {
     title: 'Reptile Nation',
     description:
       'Welcome to ReptileNation where we walk and talk reptiles. Join us in supporting, learning, and growing with reptiles while sipping a cup of coffee',
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-gtag`,
-      options: {
-        trackingId: "UA-93825609-2",
-        head: true,
-      },
-    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     {
@@ -97,3 +89,17 @@ module.exports = {
     )
   },
 }
+
+if (process.env.CONTEXT === "production") {
+  const googleAnalyticsCfg = {
+    resolve: `gatsby-plugin-gtag`,
+    options: {
+      trackingId: "UA-93825609-2",
+      head: true,
+    },
+  };
+
+  cfg.plugins.push(googleAnalyticsCfg);
+}
+
+module.exports = cfg
