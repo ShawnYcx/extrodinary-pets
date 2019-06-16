@@ -15,7 +15,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className="navbar is-transparent"
+      className="navbar"
       role="navigation"
       aria-label="main-navigation"
     >

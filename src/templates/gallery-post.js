@@ -93,11 +93,16 @@ export const pageQuery = graphql`
         featuredpost
         price
         image {
-          childImageSharp {
-            fluid(maxWidth: 120, quality: 100) {
-              ...GatsbyImageSharpFluid_tracedSVG
+          childImageSharp{
+            fluid (maxWidth:700, quality:100){
+              src
+              srcSet
+              aspectRatio
+              sizes
+              base64
             }
           }
+          publicURL
         }
       }
     }

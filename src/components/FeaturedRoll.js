@@ -1,47 +1,65 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery } from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage';
 
-import "bulma-carousel/dist/css/bulma-carousel.min.css";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-const bulmaCarousel = (() => {
-  if (typeof window !== 'undefined') {
-    return require('bulma-carousel')
-  }
-})()
-
+const settings = {
+  dots: true,
+  infinite: false,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  initialSlide: 0,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        initialSlide: 0
+      }
+    },
+  ]
+};
 
 const FeaturedRoll = ({ data }) => {
-  const { edges: gallery } = data.allMarkdownRemark
-
-  useEffect(() => {
-    bulmaCarousel.attach('#carousel-demo', {
-      slidesToScroll: 1,
-      slidesToShow: 2
-    });
-  }, [])
+  const { edges: gallery } = data.allMarkdownRemark;
 
   return (
-    <div id="carousel-demo" className="carousel">
+    <Slider {...settings}>
       {gallery && gallery.map(({ node: post }, index) => (
-        <Link to={post.fields.slug} key={post.id}>
-          <div className={`item-${index}`} style={{ padding: '.2rem' }}>
+        // <Link to={post.fields.slug} key={post.id}>
+        <div key={post.id} style={{ display: 'inline-block' }}>
+          <div className={`item-${index}`} style={{ maxWidth: '300px', height: 'auto', margin: '0 auto' }}>
             <PreviewCompatibleImage
               imageInfo={{
                 image: post.frontmatter.image,
                 alt: `Image thumbnail for post ${post.frontmatter.title}`,
                 style: {
-                  maxWidth: '500px',
-                  height: '250px',
+                  maxWidth: '100%',
+                  maxHeight: '100%',
                   borderRadius: '5px',
                 }
               }}
             />
           </div>
-        </Link>
+        </div>
+        // </Link>
       ))}
-    </div>
+    </Slider>
   )
 }
 
@@ -80,12 +98,16 @@ export default () => (
                 featuredpost
                 price
                 image {
-                  childImageSharp {
-                    fluid(maxWidth: 120, quality: 100) {
-                      ...GatsbyImageSharpFluid
-                      presentationWidth
+                  childImageSharp{
+                    fluid (maxWidth:700, quality:50){
+                      src
+                      srcSet
+                      aspectRatio
+                      sizes
+                      base64
                     }
                   }
+                  publicURL
                 }
               }
             }

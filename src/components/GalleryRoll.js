@@ -66,12 +66,16 @@ export default () => (
                 featuredpost
                 price
                 image {
-                  childImageSharp {
-                    fluid(maxWidth: 120, quality: 100) {
-                      ...GatsbyImageSharpFluid_tracedSVG
-                      presentationWidth
+                  childImageSharp{
+                    fluid (maxWidth:700, quality:50){
+                      src
+                      srcSet
+                      aspectRatio
+                      sizes
+                      base64
                     }
                   }
+                  publicURL
                 }
               }
             }
