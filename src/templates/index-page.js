@@ -32,6 +32,7 @@ export const IndexPageTemplate = ({
             justifyContent: 'space-around',
             alignItems: 'left',
             flexDirection: 'column',
+            padding: '.5rem'
           }}
         >
           <h1
@@ -41,7 +42,6 @@ export const IndexPageTemplate = ({
           </h1>
           <h3
             className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen intro-style"
-
           >
             {subheading}
           </h3>
@@ -53,6 +53,7 @@ export const IndexPageTemplate = ({
             <div className="columns">
               <div className="column is-12">
                 <div className="content">
+                  <h1 className="title">Featured Posts</h1>
                   <FeaturedRoll />
 
                   {/* <div className="content">

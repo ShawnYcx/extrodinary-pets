@@ -43,7 +43,7 @@ const FeaturedRoll = ({ data }) => {
       {gallery && gallery.map(({ node: post }, index) => (
         // <Link to={post.fields.slug} key={post.id}>
         <div key={post.id} style={{ display: 'inline-block' }}>
-          <div className={`item-${index}`} style={{ maxWidth: '300px', height: 'auto', margin: '0 auto' }}>
+          <div className={`item-${index}`} style={{ maxWidth: '300px', height: '225px', margin: '0 auto' }}>
             <PreviewCompatibleImage
               imageInfo={{
                 image: post.frontmatter.image,
